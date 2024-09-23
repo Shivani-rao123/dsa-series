@@ -32,18 +32,39 @@
 // }
 
 // to check the number is even or odd   
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int n;
+//     cout<<"Enter the number";
+//     cin>>n;
+//     if (n%2==0){
+//         cout<< "the number is even";
+
+//     }
+//     else{
+//         cout<<"The number is odd";
+//     }
+//     return 0;
+// }
+
+
+//else  if
 #include<iostream>
 using namespace std;
 int main(){
-    int n;
-    cout<<"Enter the number";
-    cin>>n;
-    if (n%2==0){
-        cout<< "the number is even";
+    int marks;
+    cout<< "Enter the marks: ";
+    cin>>marks;
+    if(marks>=90){
+        cout<<"A grade";
 
     }
+    else if(marks>80 && marks<90){
+        cout<<"The grade is B";
+    }
     else{
-        cout<<"The number is odd";
+        cout <<"The grade is C";
     }
     return 0;
 }
