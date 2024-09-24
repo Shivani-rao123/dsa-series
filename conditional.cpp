@@ -50,21 +50,24 @@
 
 
 //else  if
+// 
+
+//to see whether the character is lower or upper case
 #include<iostream>
 using namespace std;
 int main(){
-    int marks;
-    cout<< "Enter the marks: ";
-    cin>>marks;
-    if(marks>=90){
-        cout<<"A grade";
-
+    char ch;
+    cout<<"Enter the character: ";
+    cin>>ch;
+    if(ch>='A' && ch<='Z'){
+        cout<<"The character is in upper case";
     }
-    else if(marks>80 && marks<90){
-        cout<<"The grade is B";
+    else if(ch>='a' && ch<='z'){
+        cout<<"The character is in lower case";
     }
     else{
-        cout <<"The grade is C";
+        cout<<"The character is not an alphabet";
     }
-    return 0;
+
 }
+//all character has its own number 
