@@ -77,7 +77,12 @@ int main(){
 
 //TERNARY STATEMENT
 //condition?str1:str2(if it is true then str1 will be printed else str2 will be printed)
-
+#include<iostream>
+using namespace std;
+int main(){
+    int n=45;
+    cout<< (n?)
+}
 
 
 
