@@ -71,3 +71,13 @@ int main(){
 
 }
 //all character has its own number 
+//A-Z(65-90) this is the ASCII number
+//a-z(97-122) this is the ASCII number
+//implicit type conversion character is compared with the integer
+
+//TERNARY STATEMENT
+//condition?str1:str2(if it is true then str1 will be printed else str2 will be printed)
+
+
+
+
