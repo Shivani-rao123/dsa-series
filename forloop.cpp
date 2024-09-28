@@ -1,5 +1,5 @@
-//for(initialization;condition;increament)
-//work
+// for(initialization;condition;increament)
+// work
 #include<iostream>
 using namespace std;
 int main(){
@@ -10,4 +10,5 @@ int main(){
     }
     cout<<"The sum of the first 5 natural numbers is: "<<endl;
     cout<<sum<<endl;
+    return 0;
 }
