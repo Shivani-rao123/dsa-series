@@ -53,23 +53,23 @@
 // 
 
 //to see whether the character is lower or upper case
-#include<iostream>
-using namespace std;
-int main(){
-    char ch;
-    cout<<"Enter the character: ";
-    cin>>ch;
-    if(ch>='A' && ch<='Z'){
-        cout<<"The character is in upper case";
-    }
-    else if(ch>='a' && ch<='z'){
-        cout<<"The character is in lower case";
-    }
-    else{
-        cout<<"The character is not an alphabet";
-    }
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     char ch;
+//     cout<<"Enter the character: ";
+//     cin>>ch;
+//     if(ch>='A' && ch<='Z'){
+//         cout<<"The character is in upper case";
+//     }
+//     else if(ch>='a' && ch<='z'){
+//         cout<<"The character is in lower case";
+//     }
+//     else{
+//         cout<<"The character is not an alphabet";
+//     }
 
-}
+// }
 //all character has its own number 
 //A-Z(65-90) this is the ASCII number
 //a-z(97-122) this is the ASCII number
@@ -81,7 +81,8 @@ int main(){
 using namespace std;
 int main(){
     int n=45;
-    cout<< (n?)
+    cout<< (n>=0?"positive":"negative")<<endl;
+    return 0;
 }
 
 
