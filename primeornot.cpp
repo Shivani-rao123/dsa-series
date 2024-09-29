@@ -29,7 +29,8 @@ int main(){
     for(int i=1;i<=m;i++){// how many stars should be there
         cout<<"*";
     }
-    cout<<endl;
+    cout<<endl;//hello
   }
     cout<<endl;
+    return 0;
 }
