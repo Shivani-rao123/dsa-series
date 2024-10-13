@@ -31,12 +31,12 @@ int factorial(int n){
 }
 int nCr(int n,int r){
    int fact_n=factorial(n);
-    int fact_r=factorial(r);
-     int factnmr=factorial(n-r);
-     return fact_n/(fact_r*factnmr);
+   int fact_r=factorial(r);
+   int factnmr=factorial(n-r);
+   return fact_n/(fact_r*factnmr);
 }
 int main(){
     int n=8,r=2;
-    nCr(n,r);
+    cout<<nCr(n,r)<<endl;
    
 }
