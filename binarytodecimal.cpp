@@ -1,23 +1,25 @@
-#include<iostream>
+// 
+
+//Binary to decimal
+
+#include <iostream>
 using namespace std;
-int decimalTobinary(int decNum){
+int binarytoDecimal(int DecNum){
     int ans=0;
     int pow=1;
     int rem;
-    
+   
 
-    while(decNum>0){
-       rem=decNum%2;
-       decNum=decNum/2;
-       ans+=(rem*pow);
-       pow=pow*10;
+    while(DecNum){
+        int rem=DecNum%10;
+        ans+=rem*pow;
+        pow=pow*2;
+        DecNum=DecNum/10;
+
     }
-    return ans;//binary number
+    return ans;
+
 }
 int main(){
-    int decNum;
-    cout<<"Enter the decimal number:";
-    cin>>decNum;
-    cout<<"The binary number is:" <<decimalTobinary(decNum)<<endl;
-    return 0;
+    cout<<"The decimal value is"<<binarytoDecimal(1010)<<endl;
 }
