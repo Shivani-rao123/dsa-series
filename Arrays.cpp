@@ -28,6 +28,9 @@ int main(){
     int marks[5]={99,100,54,36,88};
     int size=5;
     //int sz=sizeof(marks)/
-    
+    cout<< sizeof(marks)/sizeof(int)<<endl;
+    for(int i=0;i<size;i++){
+        cout<<"The value of marks "<<i<<" is "<<marks[i]<<endl;
+    }
     return 0;
 }
