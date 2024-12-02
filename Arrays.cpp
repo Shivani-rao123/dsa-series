@@ -22,15 +22,32 @@
 
 //loop in arrays
 
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int marks[5]={99,100,54,36,88};
+//     int size=5;
+//     //int sz=sizeof(marks)/
+//     cout<< sizeof(marks)/sizeof(int)<<endl;
+//     for(int i=0;i<size;i++){
+//         cout<<"The value of marks "<<i<<" is "<<marks[i]<<endl;
+//     }
+//     return 0;
+// }
+
+//find the smallest and largest element in array
 #include<iostream>
 using namespace std;
 int main(){
-    int marks[5]={99,100,54,36,88};
-    int size=5;
-    //int sz=sizeof(marks)/
-    cout<< sizeof(marks)/sizeof(int)<<endl;
+    int nums[]={5,15,22,1,-15,24};
+    int size=6;
+    int smallest=INT_MAX;
     for(int i=0;i<size;i++){
-        cout<<"The value of marks "<<i<<" is "<<marks[i]<<endl;
+        if(nums[i]<smallest){
+            smallest=nums[i];
+
+        }
     }
+    cout<<"smallest element is "<<smallest<<endl;
     return 0;
 }
