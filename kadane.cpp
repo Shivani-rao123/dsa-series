@@ -21,6 +21,7 @@
 
 // }
 
+//Brutforce aproach to find maximum subarray sum using Kadane's algorithm
 
 
 #include<iostream>
