@@ -7,6 +7,7 @@ int main(){
     int * ptr=&a;
     cout<<ptr<<endl;
     cout<<&a<<endl;
-    
+    cout<<*ptr<<endl;
+
     return 0;
 }
