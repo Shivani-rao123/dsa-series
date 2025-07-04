@@ -1,12 +1,19 @@
 #include<iostream>
 using namespace std;
 
-void bubbleSort(int arr[],int n){ //O(n^2) time complexity, O(1) space complexity
+void bubbleSort(int arr[],int n){
+    
+    bool isSwap =false;
+     //O(n^2) time complexity, O(1) space complexity
     for(int i=0;i<n-1;i++){
         for(int j=0;j<n-i-1;j++){
             if(arr[j]>arr[j+1]){
                swap(arr[j],arr[j+1]);
+               isSwap = true; // A swap occurred
             }
+        }
+        if(!isSwap){//array already sorted
+            return;
         }
 
      }
