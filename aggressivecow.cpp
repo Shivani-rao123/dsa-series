@@ -46,3 +46,4 @@ int main() {
     cout << getDistance(arr, 5, 3) << endl;
     return 0;
 }
+ 
