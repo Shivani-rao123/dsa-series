@@ -21,6 +21,7 @@ int main(){
     cout<< "val at idx 2 "<<vec.at(2)<<endl; // Output: 3
     cout<< "front" << vec.front() << endl; // Output: 1
     cout<< "back" << vec.back() << endl; // Output: 3
+    vec.erase(vec.begin() + 1); // Removes the element at index 1
     
    
     return 0;
