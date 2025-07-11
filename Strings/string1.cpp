@@ -9,9 +9,11 @@ int main() {
     cout<<str<<endl;// e can print this twice a strings are dynamic in nature 
 
 //u can add the strings 
-    char chArr[] ="apna college";
-    chhArr="hello";
-    cout<<chArr<<endl;// we cant print this twice 
+   
+    string str4;
+    getline(cin,str4);
+    cout<<str4<<endl; // This will print the string entered by the user
+    // cout<<chArr<<endl;// we cant print this twice 
     return 0;
 
 }
