@@ -2,6 +2,7 @@
 #include<vector>
 #include<list>
 #include<deque>
+#include<stack>
 using namespace std;
 int main() {
     vector<pair<int,int>> vec={{ 1,2 },{2,3},{3,4}};
