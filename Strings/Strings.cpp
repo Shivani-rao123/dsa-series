@@ -3,6 +3,10 @@
 using namespace std;
 
 int main(){
+    char c[100];
+    cout<<"Enter a string: ";
+    cin.getline(c,100,'$');
+    cout<<c<<endl;
     char str[] = {'a','b','c','\0'};
     char str1[]="College";
     cout<<str<<endl;
