@@ -12,5 +12,6 @@ int main() {
     for(int val:l){
         cout<<val<<" "; // Output: 5 3 1 2
     }
+    cout<<l[1]<<endl; // Output: 3// we cannot access elements by index in list, so this will not work
     return 0; 
 }
