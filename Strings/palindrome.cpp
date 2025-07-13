@@ -34,7 +34,7 @@ int main() {
 
 
     if(isPalindrome) {
-        cout << "The string is a palindrome." << endl;
+        cout << "The string is a palindrome!." << endl;
     } else {
         cout << "The string is not a palindrome." << endl;
     }
