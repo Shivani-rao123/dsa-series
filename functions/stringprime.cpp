@@ -45,6 +45,10 @@ int gcdrec(int a,int b){
     if(a>b) return gcdrec(a%b,b);
     else return gcdrec(a,b%a);
 }
+int lcm(int a,int b){
+    int gcd= gcdrec(a,b);
+    return (a*b)/gcd; // LCM formula: (a * b) / GCD(a, b)
+}
 int main(){
     int n =153;
      if(isArmstrong(n)){
@@ -55,6 +59,7 @@ int main(){
         }
         cout<<gcd(6,12)<<endl;
         cout<<gcdrec(28,20)<<endl;
+        cout<<lcm(20,28)<<endl;
 
     return 0;
 }
