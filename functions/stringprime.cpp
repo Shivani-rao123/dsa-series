@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 string isPrime(int n){
-    fot(int i=2;i*i<=n;i++){
+    for(int i=2;i*i<=n;i++){
         if(n%i==0){
             return "Non Prime";
         }
@@ -9,8 +9,16 @@ string isPrime(int n){
     return "Prime";
 
 }
+void printDigits(int n){
+    while(n !=0){
+        int digit = n%10;
+        cout<< digit <<endl;
+        n=n/10;
+    }
+}
 int main(){
-    int n =42;
-    cout<<isPrime
+    int n =3568;
+    cout<<isPrime(n)<<endl;
+    printDigits(n);
     return 0;
 }
