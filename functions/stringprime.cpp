@@ -16,6 +16,18 @@ void printDigits(int n){
         n=n/10;
     }
 }
+int gcd(int a,int b){
+    while(a>0 && b>0){
+        if(a>b){
+            a=a%b;
+        }
+        else{
+            b=b%a;
+        }
+    }
+    if(a==0) return b;
+    return a; // If b is 0, return a; otherwise, return b
+}
 bool isArmstrong(int n){
     int copyN =n ;
     int sumOfCubes = 0;
@@ -27,6 +39,12 @@ bool isArmstrong(int n){
     return sumOfCubes == copyN; // Check if the sum of cubes equals the original number
 
 }
+int gcdrec(int a,int b){
+    if(a==0) return b;
+    if(b==0) return a;
+    if(a>b) return gcdrec(a%b,b);
+    else return gcdrec(a,b%a);
+}
 int main(){
     int n =153;
      if(isArmstrong(n)){
@@ -35,5 +53,8 @@ int main(){
         else{
             cout<<"It is not an Armstrong number"<<endl;
         }
+        cout<<gcd(6,12)<<endl;
+        cout<<gcdrec(28,20)<<endl;
+
     return 0;
 }
