@@ -16,7 +16,7 @@ int main() {
     while(st <= e) {
         swap(str[st], str[e]);
         st++;
-        e--;
+        end--;
     }
 
     // Compare str1 and reversed str
