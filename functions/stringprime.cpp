@@ -16,9 +16,24 @@ void printDigits(int n){
         n=n/10;
     }
 }
+bool isArmstrong(int n){
+    int copyN =n ;
+    int sumOfCubes = 0;
+    while(n!=0){
+        int dig= n%10;
+        sumOfCubes += dig * dig * dig; // Calculate the cube of the digit
+        n = n / 10; // Remove the last digit
+    }
+    return sumOfCubes == copyN; // Check if the sum of cubes equals the original number
+
+}
 int main(){
-    int n =3568;
-    cout<<isPrime(n)<<endl;
-    printDigits(n);
+    int n =153;
+     if(isArmstrong(n)){
+        cout<<"It is an Armstrong number"<<endl;
+     }
+        else{
+            cout<<"It is not an Armstrong number"<<endl;
+        }
     return 0;
 }
