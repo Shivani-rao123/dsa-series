@@ -25,9 +25,23 @@ int getMaxSum(int mat[][3],int rows, int cols){
     }
     return maxSum;
 }
+int diagnolmatrix(int mat[][3],int n){
+    int sum=0;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(i==j){
+                sum += mat[i][j];
+            }
+            else if(j==n-i-1){
+                sum+=mat[i][j];
+            }
+        }
+    }
+}
 
 
 int main() {
+    int n=4;
     
     int matrix[3][3] = {
         {1, 2, 3},
@@ -45,5 +59,21 @@ int main() {
         cout << "Element not found in the matrix." << endl;
     }
     cout << "Maximum Row Sum: " << getMaxSum(matrix, rows, cols) << endl;
+    cout<< diagnolmatrix(matrix,n)<<endl;
     return 0;
 }
+
+
+// for column wise maximum sum
+
+// int getMaxColSum(int mat[][3], int rows, int cols) {
+//     int maxColSum = INT_MIN;
+//     for(int j = 0; j < cols; j++) {
+//         int colSum = 0;
+//         for(int i = 0; i < rows; i++) {
+//             colSum += mat[i][j];
+//         }
+//         maxColSum = max(maxColSum, colSum);
+//     }
+//     return maxColSum;
+// }
