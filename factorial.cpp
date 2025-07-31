@@ -7,6 +7,5 @@ int factorial(int n){
 }
 int main(){
     int n=4;
-    cout<<factorial(n);
-    return 0;
+    cout<<factorial(n),,endl;    return 0;
 }
