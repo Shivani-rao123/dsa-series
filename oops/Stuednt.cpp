@@ -5,26 +5,29 @@ using namespace std;
 class Student {
     public :
       string name;
-      double cgpa;
+      double *cgpaPtr;
 
       Student(string name,double cgpa){
         this->name =name;
-        this->cgpa =cgpa;
+        cgpaPtr=new double;
+        *cgpaPtr =cgpa;
 
       }
       Student(Student &obj){
         this ->name =obj.name;
-        this -> cgpa=obj.cgpa;
+        this -> cgpaPtr=obj.cgpaPtr;
       }
       void getinfo(){
         cout<< "name : "<<name<<endl;
-        cout<<"cgpa: "<<cgpa<<endl;
+        cout<<"cgpa: "<<*cgpaPtr<<endl;
       }
 };
 int main() {
     Student s1("rahul",8.9);
     Student s2(s1);
      
-
+s1.getinfo();
+*(s2.cgpaPtr)=9.2;
+s1.getinfo();
     return 0;
 }
