@@ -15,7 +15,15 @@ class Student {
       }
       Student(Student &obj){
         this ->name =obj.name;
-        this -> cgpaPtr=obj.cgpaPtr;
+        cgpaPtr =new double;
+        *cgpaPtr = *obj.cgpaPtr;
+      }
+      //destructor
+      ~Student() {
+         cout<<"Hi , I delete everything\n";
+         delete cgpaPtr;//it is necessary to dree the memory or else there is memory leak
+         
+
       }
       void getinfo(){
         cout<< "name : "<<name<<endl;
@@ -29,5 +37,6 @@ int main() {
 s1.getinfo();
 *(s2.cgpaPtr)=9.2;
 s1.getinfo();
+s2.getinfo();
     return 0;
 }
