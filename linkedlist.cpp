@@ -45,9 +45,55 @@ void push_back(int val){
     }
 
 }
+void pop_front(){
+    if(head == NULL){
+        cout<< "LL is empty\n";
+        return;
+    }
+    Node* temp = head;
+    head= head->next;
+    temp->next=NULL;
+    delete temp;
+
+}
+void pop_back(){
+    if(head == NULL){
+        cout<<"LL is empty\n";
+        return;
+    }
+    Node * temp =head;
+    while(temp->next!=tail){
+        temp =temp->next;
+    }
+    temp->next=NULL;
+    delete tail;
+    tail = temp;
+}
+void insert(int val,int pos){
+    if(pos<0){
+        cout<<"invalid pos\n";
+        return;
+
+    }
+    if(pos==0){
+        push_front(val);
+        return;
+    }
+    Node* temp = head;
+    for(int i=0;i<pos-1;i++){
+        temp =temp->next;
+    }
+    Node*newNode = new Node(val);
+    newNode->next= temp->next;
+    temp->next=newNode;
+    
+}
 void printLL(){
     Node* temp =head;
     while(temp!=NULL){
+        if(temp==NULL){
+            cout<<"Invalid temp";
+        }
         cout<<temp->data<<" ";
         temp=temp->next;
     }
@@ -60,6 +106,9 @@ int main() {
     ll.push_front(2);
     ll.push_front(3);
     ll.push_back(4);
+    ll.pop_front();
+    ll.pop_back();
+    ll.insert(4,1);
     ll.printLL();
     return 0;
 }
