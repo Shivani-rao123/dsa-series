@@ -99,6 +99,19 @@ void printLL(){
     }
     cout<<endl;
 }
+int search(int key){
+    Node* temp =head;
+    int idx =0;
+    while(temp!= NULL){
+        if(temp->data == key){
+            return idx;
+        }
+        temp = temp->next;
+        idx++;
+    }
+    return -1
+
+}
 };
 int main() {
     List ll;
@@ -109,6 +122,7 @@ int main() {
     ll.pop_front();
     ll.pop_back();
     ll.insert(4,1);
+    cout<<ll.search(2)<<endl;
     ll.printLL();
     return 0;
 }
