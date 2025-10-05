@@ -8,7 +8,7 @@ class Node{
   Node(int val){
     data=val;
     next=prev=NULL;
-
+ 
   }
 
 };
@@ -50,6 +50,29 @@ class DoublyList{
         }
         cout<<"NULL\n";
     }
+    void pop_front(){
+        if(head==NULL){
+            cout<<"List is empty\n";
+            return;
+        }
+        Node*temp=head;
+        head=head->next;
+        if(head!=NULL){
+            head->prev=NULL;
+            
+        }
+    }
+    void pop_back(){
+        if(head==NULL){
+            cout<<"List is empty\n";
+            return;
+        }
+        Node*temp=tail;
+        tail=tail->prev;
+        if(tail!=NULL){
+            tail->next=NULL;
+        }
+    }
 };
 int main(){
     DoublyList dl;
@@ -57,6 +80,8 @@ int main(){
      dl.push_front(2);
      dl.push_front(3);
      dl.push_back(66);
+     dl.pop_front();
+     dl.pop_back();
      dl.print();
     return 0;
 }
