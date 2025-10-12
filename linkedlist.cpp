@@ -7,9 +7,9 @@ class Node {
        Node* next;
 
        Node(int val){
-        data = val;
-        next = NULL; 
-       }
+         data = val;
+         next = NULL; 
+    }
 
 };
 class List {
@@ -22,7 +22,7 @@ public:
   }
   void push_front(int val)
 {
-    Node* newNode =new Node(val);//dynamic
+    Node* newNode =new Node(val);
     if(head ==NULL){
         head = tail = newNode;
         return;
