@@ -51,6 +51,24 @@ int sumNodes(Node*root){
     int rightsum=sumNodes(root->right);
     return leftsum+rightsum+root->data;
 }
+void preorderTraversal(Node*root){
+    if(root==NULL) return ;
+    cout<<root->data<<" ";
+    preorderTraversal(root->left);
+    preorderTraversal(root->right);
+}
+void InorderTraversal(Node*root){
+    if(root==NULL) return ;
+    InorderTraversal(root->left);
+    cout<<root->data<<" ";
+    InorderTraversal(root->right);
+}
+void PostorderedTraversal(Node*root){
+    if(root==NULL) return ;
+    PostorderedTraversal(root->left);
+    PostorderedTraversal(root->right);
+    cout<<root->data<<" ";
+}
 
 int main() {
     vector<int> preorder = {1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1};
@@ -59,6 +77,12 @@ int main() {
     cout << "Height: " << height(root) << endl;
     cout<<"node count: "<<count(root)<<endl;
     cout<<"sum of nodes: "<<sumNodes(root)<<endl;
+    cout<<"preoder traversal";
+    preorderTraversal(root);
+    cout<<"Inordere traversal";
+    InorderTraversal(root);
+    cout<<"Postordered traversal";
+    PostorderedTraversal(root);
 
     return 0;
 }
